@@ -1,0 +1,90 @@
+
+//+------------------------------------------------------------------+
+//|                                            Elliot Wave Oscillator |
+//|                                      https://www.forexroboteasy.com |
+//|                                                  Forex Robot Easy Team |
+//+------------------------------------------------------------------+
+#property copyright 'Forex Robot Easy Team'
+#property link      'https://www.forexroboteasy.com'
+#property version   '1.0'
+#property strict
+
+// Elliot Wave Oscillator parameters
+input int fast_ema_period = 5;
+input int slow_ema_period = 35;
+input int smoothing_period = 5;
+
+// Trading strategy parameters
+input ENUM_TRADE_STRATEGY trade_strategy = TRADE_STRATEGY_HOLD;  // Default is HOLD
+
+//+------------------------------------------------------------------+
+//| Custom indicator initialization function                         |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Add the indicator code here
+    
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Custom indicator calculation function                            |
+//+------------------------------------------------------------------+
+int OnCalculate(const int rates_total,
+                const int prev_calculated,
+                const datetime& time[],
+                const double& open[],
+                const double& high[],
+                const double& low[],
+                const double& close[],
+                const long& tick_volume[],
+                const long& volume[],
+                const int& spread[])
+{
+    // Add the calculation code here
+    
+    return(rates_total);
+}
+
+//+------------------------------------------------------------------+
+//| Custom trading function                                          |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Add the trading code here
+    
+    if (trade_strategy == TRADE_STRATEGY_HOLD)
+    {
+        // Implement the HOLD trading strategy
+    }
+    else if (trade_strategy == TRADE_STRATEGY_SCALPING)
+    {
+        // Implement the SCALPING trading strategy
+    }
+    else if (trade_strategy == TRADE_STRATEGY_SWING)
+    {
+        // Implement the SWING trading strategy
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Custom alert function                                            |
+//+------------------------------------------------------------------+
+void SendAlert(const string message)
+{
+    // Add the code to send alerts to MT5 Terminal and mobile phones here
+}
+
+//+------------------------------------------------------------------+
+//| Custom notification function                                     |
+//+------------------------------------------------------------------+
+void SendNotification(const string message)
+{
+    // Add the code to send notifications to MT5 Terminal and mobile phones here
+}
+
+//+------------------------------------------------------------------+
+//| Custom indicator utility functions                               |
+//+------------------------------------------------------------------+
+// Add any additional utility functions here
+
